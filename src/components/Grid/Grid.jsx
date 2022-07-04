@@ -8,7 +8,7 @@ function Grid({ state, setIsState }) {
       <div className="grid">
         {Array.from(Array(9)
           .keys())
-          .map(el => <Cell id={el} state={state} setIsState={setIsState}/>)
+          .map(el => <Cell key={el} id={el} state={state} setIsState={setIsState}/>)
         }
       </div>
   );

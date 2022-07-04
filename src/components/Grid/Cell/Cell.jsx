@@ -4,8 +4,7 @@ import './Cell.css';
 function Cell({ id, state, setIsState }) {
 
   const clickCell = () => {
-    console.log(id+1)
-    setIsState({...state, id: true});
+    setIsState({...state, id: 'o'});
     console.log(state)
   }
   
