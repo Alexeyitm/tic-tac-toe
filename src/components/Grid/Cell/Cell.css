@@ -1,19 +1,41 @@
 .tic-tac-toe__cell {
   width: 100%;
   height: 100%;
-  border: 1px blue solid;
+  border: 1px peru solid;
   padding: 0;
 }
 
 .tic-tac-toe__symbol {
   width: 100%;
   height: 100%;
+  margin: 0 auto;
+  transition: all 1s;
 }
 
 .tic-tac-toe__symbol_x {
   background-color: red;
+  width: 80%;
+  height: 10%;
+  border-radius: 5px;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.tic-tac-toe__symbol_x::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background-color: red;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  transform: rotate(90deg);
 }
 
 .tic-tac-toe__symbol_o {
-  background-color: blue;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  border: 1em solid blue;
 }

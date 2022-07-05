@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: repeat(3, 200px);
   grid-template-rows: repeat(3, 200px);
-  border: 1px blue solid;
+  border: 1px peru solid;
 }
 
 @media screen and (max-width: 768px) {
