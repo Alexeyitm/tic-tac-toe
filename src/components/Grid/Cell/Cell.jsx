@@ -1,11 +1,13 @@
 import React from 'react';
 import './Cell.css';
 
-function Cell({ id, state, setIsState }) {
+function Cell({ id, position, setIsPosition }) {
 
   const clickCell = () => {
-    setIsState({...state, id: 'o'});
-    console.log(state)
+    const newPosition = position;
+    newPosition[id] = 'o'
+    setIsPosition(newPosition);
+    console.log(position)
   }
   
   return (
