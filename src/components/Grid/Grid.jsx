@@ -2,7 +2,7 @@ import React from 'react';
 import './Grid.css';
 import Cell from './Cell/Cell';
 
-function Grid({ position, setIsPosition }) {
+function Grid({ isType, setIsType, isPosition, setIsPosition }) {
 
   return (
       <div className="grid">
@@ -10,7 +10,9 @@ function Grid({ position, setIsPosition }) {
           .keys())
           .map(el => <Cell 
                       id={el}
-                      position={position} 
+                      isType={isType}
+                      setIsType={setIsType}
+                      isPosition={isPosition} 
                       setIsPosition={setIsPosition} 
                       key={el} />
           )

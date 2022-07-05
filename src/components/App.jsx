@@ -5,7 +5,9 @@ import Grid from './Grid/Grid';
 
 function App() {
 
-  const [position, setIsPosition] = useState({
+  const [isType, setIsType] = useState(true)
+
+  const [isPosition, setIsPosition] = useState({
     0: '', 1: '', 2: '',
     3: '', 4: '', 5: '',
     6: '', 7: '', 8: ''
@@ -14,7 +16,12 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Grid position={position} setIsPosition={setIsPosition}/>
+      <Grid
+        isType={isType}
+        setIsType={setIsType}
+        isPosition={isPosition}
+        setIsPosition={setIsPosition}
+      />
     </div>
   );
 }
