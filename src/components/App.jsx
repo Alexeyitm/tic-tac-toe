@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import Header from './Header/Header'
 import Grid from './Grid/Grid';
@@ -12,6 +12,8 @@ function App() {
     3: '', 4: '', 5: '',
     6: '', 7: '', 8: ''
   });
+
+  useEffect(() => {}, [isPosition]);
 
   return (
     <div className="App">
