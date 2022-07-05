@@ -33,7 +33,7 @@ Tic-Tac-Toe - "Крестики-нолики". SPA на React, в точност
 
 ## Посмотреть страницу и макет:
 
-* [Tic-Tac-Toe в GitHub Pages](https://alexeyitm.github.io/tic-tac-toe/)
+* [Tic-Tac-Toe на GitHub Pages](https://alexeyitm.github.io/tic-tac-toe/)
 * [Архитектура приложения на Google Slides](https://docs.google.com/presentation/d/1C1S9CoHG4WXQByYmRjfQRFmNkLCSqS4Tx8FsrzMKJ5M/edit#slide=id.p)
 
 ## Что можно улучшить
