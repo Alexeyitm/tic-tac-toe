@@ -4,13 +4,11 @@ import './Cell.css';
 function Cell({ id, isType, setIsType, isPosition, setIsPosition }) {
 
   const clickCell = () => {
-
     if (isPosition[id] === 'o' || isPosition[id] === 'x') {
       return null
     }
 
     setIsType(!isType);
-
     const newPosition = isPosition;
     isType ? newPosition[id] = 'o' : newPosition[id] = 'x'
     setIsPosition(newPosition);
