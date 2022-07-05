@@ -7,7 +7,6 @@ function Cell({ id, isType, setIsType, isPosition, setIsPosition, isWin }) {
     if (isPosition[id] === 'o' || isPosition[id] === 'x') {
       return null
     }
-
     setIsType(!isType);
     const newPosition = isPosition;
     isType ? newPosition[id] = 'x' : newPosition[id] = 'o'
@@ -21,10 +20,10 @@ function Cell({ id, isType, setIsType, isPosition, setIsPosition, isWin }) {
       onClick={!isWin ? clickCell : null}
       style={isPosition[id] === "x" || 
             isPosition[id] === "o" ||
-            isWin ? {cursor: 'default'} : {cursor: 'pointer'}}
+            isWin ? {cursor: "default"} : {cursor: "pointer"}}
       >
       <div className={"tic-tac-toe__symbol " + 
-      (isPosition[id] === "x" ? "tic-tac-toe__symbol_x " : "") +
+      (isPosition[id] === "x" ? "tic-tac-toe__symbol_x" : "") +
       (isPosition[id] === "o" ? "tic-tac-toe__symbol_o": "")}></div>
     </button>
   );

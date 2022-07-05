@@ -1,0 +1,56 @@
+.popup {
+  position: fixed;
+  height: 130vh;
+  width: 100vw;
+  background: rgba(0,0,0,0.8);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.popup_opened {
+  visibility: visible;
+  opacity: 1;
+  transition: all .5s;
+}
+
+.popup__container {
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.popup__gif {
+  width: 192px;
+  height: 192px;
+  background: url(../../images/win.gif);
+  margin: 0 auto;
+}
+
+.popup__text {
+  margin: 60px 0 20px;
+}
+
+.popup__again {
+  margin: 0 auto;
+  border: 0;
+  padding: 0;
+  width: 150px;
+  height: 50px;
+  background: #F1C40F;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.popup__again:hover {
+  background-color: aqua;
+}
+

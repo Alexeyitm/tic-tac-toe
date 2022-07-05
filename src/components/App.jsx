@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import Header from './Header/Header'
 import Grid from './Grid/Grid';
+import Popup from './Popup/Popup';
 
 function App() {
 
@@ -36,6 +37,16 @@ function App() {
     }
   }
 
+  const resetApp = () => {
+    setIsType(true);
+    setIsPosition({
+      0: '', 1: '', 2: '',
+      3: '', 4: '', 5: '',
+      6: '', 7: '', 8: ''
+    })
+    setIsWin('');
+  }
+
   useEffect(() => {
     setTimeout(check, 500);
   });
@@ -49,6 +60,7 @@ function App() {
         setIsType={setIsType}
         setIsPosition={setIsPosition}
         setIsWin={setIsWin}
+        resetApp={resetApp}
       />
       <Grid
         isType={isType}
@@ -56,6 +68,10 @@ function App() {
         isPosition={isPosition}
         setIsPosition={setIsPosition}
         isWin={isWin}
+      />
+      <Popup
+        isWin={isWin}
+        resetApp={resetApp}
       />
     </div>
   );
