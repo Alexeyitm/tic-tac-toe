@@ -3,6 +3,7 @@
   height: 100%;
   border: 1px #F1C40F solid;
   padding: 0;
+  cursor: pointer;
 }
 
 .tic-tac-toe__symbol {

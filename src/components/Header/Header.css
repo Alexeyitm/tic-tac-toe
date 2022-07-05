@@ -12,6 +12,7 @@
   width: 48px;
   background: url(../../images/logo.png) no-repeat;
   background-size: cover;
+  cursor: pointer;
 }
 
 .header__title {
@@ -35,4 +36,5 @@
   height: 40px;
   background: url(../../images/reset.png) no-repeat;
   background-size: cover;
+  cursor: pointer;
 }
