@@ -10,7 +10,7 @@ function Cell({ id, isType, setIsType, isPosition, setIsPosition }) {
 
     setIsType(!isType);
     const newPosition = isPosition;
-    isType ? newPosition[id] = 'o' : newPosition[id] = 'x'
+    isType ? newPosition[id] = 'x' : newPosition[id] = 'o'
     setIsPosition(newPosition);
     console.log(isPosition)
   }
@@ -18,8 +18,8 @@ function Cell({ id, isType, setIsType, isPosition, setIsPosition }) {
   return (
     <button className="tic-tac-toe__cell" onClick={clickCell}>
       <div className={"tic-tac-toe__symbol " + 
-      (isPosition[id] === "o" ? "tic-tac-toe__symbol_x " : "") +
-      (isPosition[id] === "x" ? "tic-tac-toe__symbol_o": "")}></div>
+      (isPosition[id] === "x" ? "tic-tac-toe__symbol_x " : "") +
+      (isPosition[id] === "o" ? "tic-tac-toe__symbol_o": "")}></div>
     </button>
   );
 }

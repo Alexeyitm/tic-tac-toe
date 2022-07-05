@@ -11,8 +11,37 @@ function App() {
     3: '', 4: '', 5: '',
     6: '', 7: '', 8: ''
   });
+  const [isWin, setIsWin] = useState('');
+
+  const check = () => {
+    if ((isPosition[0] === "x" && isPosition[1] === "x" && isPosition[2] === "x") ||
+        (isPosition[3] === "x" && isPosition[4] === "x" && isPosition[5] === "x") ||
+        (isPosition[6] === "x" && isPosition[7] === "x" && isPosition[8] === "x") ||
+        (isPosition[0] === "x" && isPosition[3] === "x" && isPosition[6] === "x") ||
+        (isPosition[1] === "x" && isPosition[4] === "x" && isPosition[7] === "x") ||
+        (isPosition[2] === "x" && isPosition[5] === "x" && isPosition[8] === "x") ||
+        (isPosition[0] === "x" && isPosition[4] === "x" && isPosition[8] === "x") ||
+        (isPosition[2] === "x" && isPosition[4] === "x" && isPosition[6] === "x")) {
+      setIsWin('x')
+    } else if
+        ((isPosition[0] === "o" && isPosition[1] === "o" && isPosition[2] === "o") ||
+        (isPosition[3] === "o" && isPosition[4] === "o" && isPosition[5] === "o") ||
+        (isPosition[6] === "o" && isPosition[7] === "o" && isPosition[8] === "o") ||
+        (isPosition[0] === "o" && isPosition[3] === "o" && isPosition[6] === "o") ||
+        (isPosition[1] === "o" && isPosition[4] === "o" && isPosition[7] === "o") ||
+        (isPosition[2] === "o" && isPosition[5] === "o" && isPosition[8] === "o") ||
+        (isPosition[0] === "o" && isPosition[4] === "o" && isPosition[8] === "o") ||
+        (isPosition[2] === "o" && isPosition[4] === "o" && isPosition[6] === "o")) {
+      setIsWin('o')
+    }
+  }
+
+  useEffect(() => {
+    setTimeout(check, 500);
+  });
 
   useEffect(() => {}, [isPosition]);
+
 
   return (
     <div className="App">
