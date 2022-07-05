@@ -8,6 +8,7 @@
 
 @media screen and (max-width: 768px) {
   .grid {
+    margin-top: 80px;
     grid-template-columns: repeat(3, 150px);
     grid-template-rows: repeat(3, 150px);
   }
@@ -15,6 +16,7 @@
 
 @media screen and (max-width: 500px) {
   .grid {
+    margin-top: 120px;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
   }

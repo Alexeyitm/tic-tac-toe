@@ -1,6 +1,6 @@
 .popup {
   position: fixed;
-  height: 130vh;
+  height: 150vh;
   width: 100vw;
   background: rgba(0,0,0,0.8);
   visibility: hidden;
