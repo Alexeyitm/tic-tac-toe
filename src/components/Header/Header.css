@@ -1,8 +1,38 @@
 .header {
-  width: 100%;
+  max-width: 100%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.header__logo {
+  color: #fff;
+  margin-top: 15px;
+  height: 48px;
+  width: 48px;
+  background: url(../../images/logo.png) no-repeat;
+  background-size: cover;
 }
 
 .header__title {
   font-size: 3em;
-  margin: 10px 0 0;
+  margin: 10px 40px 0;
+}
+
+@media screen and (max-width: 500px) {
+  .header__title {
+    font-size: 2em;
+    margin: 20px 20px 0;
+  }
+}
+
+.header__reset {
+  margin-top: 20px;
+  padding: 0;
+  border: 0;
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  background: url(../../images/reset.png) no-repeat;
+  background-size: cover;
 }
