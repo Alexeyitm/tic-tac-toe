@@ -11,7 +11,6 @@ function Cell({ id, isType, setIsType, isPosition, setIsPosition, isWin }) {
     const newPosition = isPosition;
     isType ? newPosition[id] = 'x' : newPosition[id] = 'o'
     setIsPosition(newPosition);
-    console.log(isPosition)
   }
   
   return (

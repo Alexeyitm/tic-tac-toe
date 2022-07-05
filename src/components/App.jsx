@@ -14,6 +14,16 @@ function App() {
   });
   const [isWin, setIsWin] = useState('');
 
+  const resetApp = () => {
+    setIsType(true);
+    setIsPosition({
+      0: '', 1: '', 2: '',
+      3: '', 4: '', 5: '',
+      6: '', 7: '', 8: ''
+    })
+    setIsWin('');
+  }
+
   const check = () => {
     if ((isPosition[0] === "x" && isPosition[1] === "x" && isPosition[2] === "x") ||
         (isPosition[3] === "x" && isPosition[4] === "x" && isPosition[5] === "x") ||
@@ -37,15 +47,19 @@ function App() {
     }
   }
 
-  const resetApp = () => {
-    setIsType(true);
-    setIsPosition({
-      0: '', 1: '', 2: '',
-      3: '', 4: '', 5: '',
-      6: '', 7: '', 8: ''
-    })
-    setIsWin('');
-  }
+  useEffect(() => {
+    function closeByEscape(e) {
+      if(e.key === 'Escape') {
+        resetApp();
+      }
+    }
+    if(isWin) {
+      document.addEventListener('keydown', closeByEscape);
+      return () => {
+        document.removeEventListener('keydown', closeByEscape);
+      }
+    }
+  }, [isWin])
 
   useEffect(() => {
     setTimeout(check, 500);
