@@ -1,7 +1,7 @@
 import React from 'react';
 import './Cell.css';
 
-function Cell({ id, isType, setIsType, isPosition, setIsPosition }) {
+function Cell({ id, isType, setIsType, isPosition, setIsPosition, isWin }) {
 
   const clickCell = () => {
     if (isPosition[id] === 'o' || isPosition[id] === 'x') {
@@ -16,7 +16,13 @@ function Cell({ id, isType, setIsType, isPosition, setIsPosition }) {
   }
   
   return (
-    <button className="tic-tac-toe__cell" onClick={clickCell}>
+    <button 
+      className="tic-tac-toe__cell"
+      onClick={!isWin ? clickCell : null}
+      style={isPosition[id] === "x" || 
+            isPosition[id] === "o" ||
+            isWin ? {cursor: 'default'} : {cursor: 'pointer'}}
+      >
       <div className={"tic-tac-toe__symbol " + 
       (isPosition[id] === "x" ? "tic-tac-toe__symbol_x " : "") +
       (isPosition[id] === "o" ? "tic-tac-toe__symbol_o": "")}></div>

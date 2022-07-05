@@ -48,12 +48,14 @@ function App() {
       <Header 
         setIsType={setIsType}
         setIsPosition={setIsPosition}
+        setIsWin={setIsWin}
       />
       <Grid
         isType={isType}
         setIsType={setIsType}
         isPosition={isPosition}
         setIsPosition={setIsPosition}
+        isWin={isWin}
       />
     </div>
   );

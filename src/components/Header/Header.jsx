@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 
-function Header({ setIsType, setIsPosition }) {
+function Header({ setIsType, setIsPosition, setIsWin }) {
 
   const resetApp = () => {
     setIsType(true);
@@ -10,6 +10,7 @@ function Header({ setIsType, setIsPosition }) {
       3: '', 4: '', 5: '',
       6: '', 7: '', 8: ''
     })
+    setIsWin('');
   }
 
   return (
